@@ -7,34 +7,62 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 
 <body>
+  <main>
+    <h1 class="title">spli<br>tter</h1>
+    <div class="container">
+      <form id="form">
+        <div>
+          <label for="bill">Bill</label>
+          <input type="text" id="bill">
+          <fieldset>
+            <legend>Select Tip %</legend>
+            <input type="radio" class="tip-input" id="tip-05">
+            <label for="tip-05">5%</label>
+            <input type="radio" class="tip-input" id="tip-10">
+            <label for="tip-10">10%</label>
+            <input type="radio" class="tip-input" id="tip-15">
+            <label for="tip-15">15%</label>
+            <input type="radio" class="tip-input" id="tip-25">
+            <label for="tip-25">25%</label>
+            <input type="radio" class="tip-input" id="tip-50">
+            <label for="tip-50">50%</label>
+            <input type="radio" class="tip-input" id="tip-custom">
+            <label for="tip-custom">Custom</label>
+          </fieldset>
 
-  Bill
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+          <label for="people-count">Number of People</label>
+          <input type="text" id="people-count">
+        </div>
+        <div class="summary">
+          <div>
+            <div>
+              <p class="summary__heading">Tip Amount</p>
+              <p class="summary__subheading">/ person</p>
+            </div>
+            <p class="summary__amount">$00</p>
+          </div>
+          <div>
+            <div>
+              <p class="summary__heading">Total</p>
+              <p class="summary__subheading">/ person</p>
+            </div>
+            <p class="summary__amount">$00</p>
+          </div>
+          <button class="reset-btn">Reset</button>
+        </div>
+      </form>
+    </div>
+  </main>
 
   <script src="index.js"></script>
 </body>

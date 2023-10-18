@@ -6,3 +6,49 @@
   border: none;
   outline: none;
 }
+
+body {
+  font-family: "Space Mono";
+  text-align: center;
+  background-color: #c5e4e7;
+}
+
+label,
+legend {
+  color: #5e7a7d;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.tip-input + label {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.375em;
+  color: #3d6666;
+  font-size: 1.5rem;
+}
+
+.summary__heading {
+  color: white;
+}
+
+.summary__subheading {
+  color: #7f9d9f;
+  font-size: 0.75rem;
+}
+
+.summary__amount {
+  color: #26c2ae;
+  font-size: 2rem;
+}
+
+.reset-btn {
+  color: #00474b;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
