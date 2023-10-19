@@ -27,6 +27,18 @@ main {
   padding: 2.5em 2em;
 }
 
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.375em;
+  color: #3d6666;
+  font-size: 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
 label,
 legend {
   color: #5e7a7d;
@@ -73,8 +85,17 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + .tip-label {
-  transition: all ease 0.3s;
   background-color: #26c2ae;
+  color: #00474b;
+}
+
+.tip-label {
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.tip-label:hover {
+  background-color: #9fe8df;
   color: #00474b;
 }
 
@@ -101,18 +122,6 @@ input[type="radio"]:checked + .tip-label {
 
 #tip-custom:focus {
   outline: #26c2ae solid;
-}
-
-.title {
-  text-transform: uppercase;
-  letter-spacing: 0.375em;
-  color: #3d6666;
-  font-size: 1.5rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1em;
 }
 
 .summary {
@@ -152,4 +161,64 @@ input[type="radio"]:checked + .tip-label {
   width: 100%;
   cursor: pointer;
   padding: 0.75em 0;
+  border-radius: 0.5em;
+}
+
+.reset-btn:hover {
+  background-color: #9fe8df;
+}
+
+@media (min-width: 750px) {
+  main {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 920px;
+    border-radius: 1.5rem;
+    margin-bottom: 1em;
+  }
+
+  .title {
+    font-size: 2rem;
+    height: fit-content;
+  }
+
+  form {
+    display: flex;
+    gap: 2em;
+  }
+
+  .calculator {
+    width: 53%;
+  }
+  .summary {
+    width: 47%;
+  }
+
+  .tip-label {
+    width: calc(33.3333% - 1rem);
+  }
+
+  #tip-custom {
+    padding-right: 0.5em;
+    width: calc(33.3333% - 0.5em - 1rem);
+  }
+
+  .summary {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .summary__row {
+    margin-bottom: 2em;
+  }
+
+  .reset-btn {
+    margin-top: auto;
+  }
 }

@@ -20,11 +20,11 @@
     <h1 class="title">spli<br>tter</h1>
     <div class="container">
       <form id="form">
-        <div>
+        <div class="calculator">
           <label for="bill">Bill</label>
           <div class="input-primary">
             <img src="./images/icon-dollar.svg" alt="money icon">
-            <input type="text" id="bill">
+            <input type="text" id="bill" placeholder="0">
           </div>
           <fieldset class="tips-selection">
             <legend>Select Tip %</legend>
@@ -47,23 +47,25 @@
           <label for="people-count">Number of People</label>
           <div class="input-primary">
             <img src="/images/icon-person.svg" alt="person icon">
-            <input type="text" id="people-count">
+            <input type="text" id="people-count" placeholder="0">
           </div>
         </div>
         <div class="summary">
-          <div class="summary__row">
-            <div>
-              <p class="summary__heading">Tip Amount</p>
-              <p class="summary__subheading">/ person</p>
+          <div>
+            <div class="summary__row">
+              <div>
+                <p class="summary__heading">Tip Amount</p>
+                <p class="summary__subheading">/ person</p>
+              </div>
+              <p class="summary__amount">$00</p>
             </div>
-            <p class="summary__amount">$00</p>
-          </div>
-          <div class="summary__row">
-            <div>
-              <p class="summary__heading">Total</p>
-              <p class="summary__subheading">/ person</p>
+            <div class="summary__row">
+              <div>
+                <p class="summary__heading">Total</p>
+                <p class="summary__subheading">/ person</p>
+              </div>
+              <p class="summary__amount">$00</p>
             </div>
-            <p class="summary__amount">$00</p>
           </div>
           <button type="reset" class="reset-btn">Reset</button>
         </div>
