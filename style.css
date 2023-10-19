@@ -5,12 +5,26 @@
   text-decoration: none;
   border: none;
   outline: none;
+  font-family: "Space Mono";
 }
 
 body {
-  font-family: "Space Mono";
   text-align: center;
   background-color: #c5e4e7;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  background-color: white;
+  border-radius: 1.5rem 1.5rem 0 0;
+  text-align: start;
+  padding: 2.5em 2em;
 }
 
 label,
@@ -18,12 +32,75 @@ legend {
   color: #5e7a7d;
 }
 
+.input-primary {
+  display: flex;
+  align-items: center;
+  background-color: #f3f9fa;
+  padding: 0.375em 1em;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+}
+
+.input-primary:focus-within {
+  outline: #26c2ae solid;
+}
+
+.input-primary img {
+  height: 100%;
+}
+.input-primary input {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: right;
+  background-color: #f3f9fa;
+  color: #00474b;
+}
+
+.tips-selection {
+  margin: 1em 0;
+}
+
+.tips-selection div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1em 0;
+}
+
 input[type="radio"] {
   display: none;
 }
-.tip-input + label {
+
+input[type="radio"]:checked + .tip-label {
+  transition: all ease 0.3s;
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+.tip-label,
+#tip-custom {
   font-size: 1.5rem;
   color: white;
+  background-color: #00474b;
+  width: calc(50% - 0.5rem);
+  text-align: center;
+  padding: 0.25em 0;
+  border-radius: 0.25em;
+}
+
+#tip-custom {
+  background-color: #f3f9fa;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #547878;
+  text-align: right;
+  padding-right: 1em;
+  width: calc(50% - 1em - 0.5rem);
+}
+
+#tip-custom:focus {
+  outline: #26c2ae solid;
 }
 
 .title {
@@ -31,6 +108,25 @@ input[type="radio"] {
   letter-spacing: 0.375em;
   color: #3d6666;
   font-size: 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.summary {
+  background-color: #00474b;
+  border-radius: 1em;
+  padding: 2em 1.5em 1.5em;
+  margin-top: 2em;
+}
+
+.summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25em;
 }
 
 .summary__heading {
@@ -49,6 +145,11 @@ input[type="radio"] {
 
 .reset-btn {
   color: #00474b;
+  background-color: #26c2ae;
+  font-weight: 800;
   text-transform: uppercase;
   font-size: 1.25rem;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.75em 0;
 }
