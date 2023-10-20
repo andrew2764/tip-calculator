@@ -131,6 +131,14 @@ input[type="radio"]:checked + .tip-label {
   outline: #26c2ae solid;
 }
 
+.people-count-label--container {
+  display: flex;
+  justify-content: space-between;
+}
+.error-message {
+  color: #e17457;
+}
+
 .summary {
   background-color: #00474b;
   border-radius: 1em;

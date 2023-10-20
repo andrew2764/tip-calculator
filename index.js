@@ -16,6 +16,10 @@ form.addEventListener("input", () => {
 resetButton.addEventListener("click", (e) => {
   e.target.disabled = true;
   e.target.classList.add("disabled");
+  tipPerPersonElem.innerHTML = "$0.00";
+  totalPerPersonElem.innerHTML = "$0.00";
+  peopleCountInput.parentElement.classList.remove("error");
+  document.querySelectorAll(".error-message").forEach((elem) => elem.remove());
 });
 
 billInput.addEventListener("input", renderAmount);
@@ -28,10 +32,17 @@ tipRadioInputs.forEach((input) =>
 
 function renderAmount(e) {
   peopleCountInput.parentElement.classList.remove("error");
+  document.querySelectorAll(".error-message").forEach((elem) => elem.remove());
   if (peopleCountInput.value === "") {
     return;
   }
   if (+peopleCountInput.value === 0) {
+    const errorMessageElem = document.createElement("p");
+    errorMessageElem.innerHTML = "Can't be zero";
+    errorMessageElem.classList.add("error-message");
+    document
+      .querySelector(".people-count-label--container")
+      .appendChild(errorMessageElem);
     peopleCountInput.parentElement.classList.add("error");
     return;
   }
