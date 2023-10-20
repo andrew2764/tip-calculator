@@ -36,10 +36,20 @@ function renderAmount(e) {
   if (peopleCountInput.value === "") {
     return;
   }
-  if (+peopleCountInput.value === 0) {
+  if (+peopleCountInput.value <= 0) {
     const errorMessageElem = document.createElement("p");
-    errorMessageElem.innerHTML = "Can't be zero";
     errorMessageElem.classList.add("error-message");
+    errorMessageElem.innerHTML = "Can't be zero or less";
+    document
+      .querySelector(".people-count-label--container")
+      .appendChild(errorMessageElem);
+    peopleCountInput.parentElement.classList.add("error");
+    return;
+  }
+  if (isNaN(+peopleCountInput)) {
+    const errorMessageElem = document.createElement("p");
+    errorMessageElem.classList.add("error-message");
+    errorMessageElem.innerHTML = "Must be a number";
     document
       .querySelector(".people-count-label--container")
       .appendChild(errorMessageElem);
