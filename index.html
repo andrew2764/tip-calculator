@@ -29,15 +29,15 @@
           <fieldset class="tips-selection">
             <legend>Select Tip %</legend>
             <div>
-              <input type="radio" name="tip" class="tip-input" id="tip-05" checked>
+              <input type="radio" name="tip" class="tip-input" id="tip-05" value="5" checked>
               <label for="tip-05" class="tip-label">5%</label>
-              <input type="radio" name="tip" class="tip-input" id="tip-10">
+              <input type="radio" name="tip" class="tip-input" id="tip-10" value="10">
               <label for="tip-10" class="tip-label">10%</label>
-              <input type="radio" name="tip" class="tip-input" id="tip-15">
+              <input type="radio" name="tip" class="tip-input" id="tip-15" value="15">
               <label for="tip-15" class="tip-label">15%</label>
-              <input type="radio" name="tip" class="tip-input" id="tip-25">
+              <input type="radio" name="tip" class="tip-input" id="tip-25" value="25">
               <label for="tip-25" class="tip-label">25%</label>
-              <input type="radio" name="tip" class="tip-input" id="tip-50">
+              <input type="radio" name="tip" class="tip-input" id="tip-50" value="50">
               <label for="tip-50" class="tip-label">50%</label>
               <input type="text" class="tip-input" id="tip-custom" placeholder="Custom">
             </div>
@@ -57,17 +57,17 @@
                 <p class="summary__heading">Tip Amount</p>
                 <p class="summary__subheading">/ person</p>
               </div>
-              <p class="summary__amount">$00</p>
+              <p class="summary__amount" id="tip-per-person">$0.00</p>
             </div>
             <div class="summary__row">
               <div>
                 <p class="summary__heading">Total</p>
                 <p class="summary__subheading">/ person</p>
               </div>
-              <p class="summary__amount">$00</p>
+              <p class="summary__amount" id="total-per-person">$0.00</p>
             </div>
           </div>
-          <button type="reset" class="reset-btn">Reset</button>
+          <button type="reset" class="reset-btn disabled" disabled>Reset</button>
         </div>
       </form>
     </div>
