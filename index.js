@@ -46,7 +46,7 @@ function renderAmount(e) {
     peopleCountInput.parentElement.classList.add("error");
     return;
   }
-  if (isNaN(+peopleCountInput)) {
+  if (isNaN(+peopleCountInput.value)) {
     const errorMessageElem = document.createElement("p");
     errorMessageElem.classList.add("error-message");
     errorMessageElem.innerHTML = "Must be a number";
